@@ -66,15 +66,15 @@ public class Posts_Chapter07 {
 				//SQLクエリの実行結果を抽出
 				System.out.println("ユーザーIDが1002のレコードを検索しました");
 
-				int selectcnt = 0; //
+				int selectCnt = 0; //
 				
 				while (result.next()) {
 					String at = result.getString("posted_at");
 					String content = result.getString("post_content");
 					int likes = result.getInt("likes");
 				
-					selectcnt++;
-					System.out.println(selectcnt + "件目：投稿日時=" + at + "／投稿内容=" + content + "／いいね数：" + likes);
+					selectCnt++;
+					System.out.println(selectCnt + "件目：投稿日時=" + at + "／投稿内容=" + content + "／いいね数：" + likes);
 				}
 
 			} catch (SQLException e) { e.printStackTrace(); }
